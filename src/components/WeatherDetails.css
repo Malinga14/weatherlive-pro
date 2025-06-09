@@ -1,0 +1,134 @@
+/* WeatherDetails Component Styles */
+.weather-details {
+  width: 100%;
+}
+
+.details-title {
+  color: var(--accent-cyan);
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.detail-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.glass-subtle {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.detail-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.detail-card:hover .detail-icon-container {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px currentColor;
+}
+
+.detail-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.detail-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-label {
+  font-size: 0.9rem;
+  color: rgba(224, 231, 255, 0.7);
+  font-weight: 400;
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  color: var(--silver-text);
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+  }
+  
+  .detail-card {
+    padding: 15px;
+    gap: 12px;
+  }
+  
+  .detail-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .detail-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .detail-value {
+    font-size: 1rem;
+  }
+  
+  .detail-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  
+  .detail-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 12px;
+    gap: 8px;
+  }
+  
+  .detail-icon-container {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .detail-icon {
+    width: 18px;
+    height: 18px;
+  }
+}

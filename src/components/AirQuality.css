@@ -1,0 +1,153 @@
+/* AirQuality Component Styles */
+.air-quality {
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.aqi-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.aqi-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.aqi-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.aqi-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.aqi-info {
+  flex: 1;
+}
+
+.aqi-level {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.aqi-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.aqi-description {
+  padding: 15px 20px;
+  background: rgba(0, 229, 255, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid var(--accent-cyan);
+}
+
+.aqi-description p {
+  margin: 0;
+  color: var(--silver-text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.pollutants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+}
+
+.pollutant-card {
+  padding: 20px 15px;
+  text-align: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.pollutant-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pollutant-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  margin-bottom: 8px;
+}
+
+.pollutant-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--silver-text);
+  margin-bottom: 5px;
+}
+
+.pollutant-unit {
+  font-size: 0.8rem;
+  color: rgba(224, 231, 255, 0.7);
+  margin-left: 3px;
+}
+
+.pollutant-label {
+  font-size: 0.8rem;
+  color: rgba(224, 231, 255, 0.8);
+  line-height: 1.3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .air-quality {
+    padding: 20px;
+  }
+  
+  .aqi-status {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .aqi-level {
+    font-size: 2.5rem;
+  }
+  
+  .pollutants-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+  }
+  
+  .pollutant-card {
+    padding: 15px 10px;
+  }
+  
+  .pollutant-value {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pollutants-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .aqi-level {
+    font-size: 2rem;
+  }
+  
+  .aqi-label {
+    font-size: 1rem;
+  }
+}

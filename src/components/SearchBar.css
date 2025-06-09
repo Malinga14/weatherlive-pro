@@ -1,0 +1,131 @@
+/* SearchBar Component Styles */
+.search-container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 12px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.search-input-container:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.search-icon {
+  color: var(--accent-cyan);
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--silver-text);
+  font-size: 1rem;
+  placeholder-color: rgba(224, 231, 255, 0.6);
+}
+
+.search-input::placeholder {
+  color: rgba(224, 231, 255, 0.6);
+}
+
+.search-button {
+  background: linear-gradient(135deg, var(--accent-cyan), var(--ocean-teal));
+  border: none;
+  padding: 8px 16px;
+  border-radius: 25px;
+  color: var(--midnight-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.search-button:hover {
+  background: linear-gradient(135deg, var(--ocean-teal), var(--accent-cyan));
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+}
+
+.location-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 50px;
+  color: var(--silver-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.location-button:hover {
+  background: rgba(0, 229, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.location-btn-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-cyan);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .search-form {
+    width: 100%;
+    min-width: unset;
+  }
+  
+  .search-input-container {
+    width: 100%;
+  }
+  
+  .location-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input-container {
+    padding: 10px 16px;
+    gap: 10px;
+  }
+  
+  .search-button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .location-button {
+    padding: 10px 16px;
+    font-size: 0.8rem;
+  }
+}

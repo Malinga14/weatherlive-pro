@@ -1,0 +1,135 @@
+/* HourlyForecast Component Styles */
+.hourly-forecast {
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent-cyan);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.section-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--accent-cyan);
+}
+
+.hourly-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-cyan) transparent;
+}
+
+.hourly-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.hourly-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.hourly-scroll::-webkit-scrollbar-thumb {
+  background: var(--accent-cyan);
+  border-radius: 3px;
+}
+
+.hourly-card {
+  min-width: 120px;
+  padding: 20px 15px;
+  border-radius: 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hourly-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 229, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.hour-time {
+  font-size: 0.9rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.hour-icon {
+  font-size: 2rem;
+  margin: 10px 0;
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.5));
+}
+
+.hour-temp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--silver-text);
+  margin: 10px 0;
+}
+
+.hour-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: rgba(224, 231, 255, 0.8);
+  margin: 5px 0;
+}
+
+.metric-icon {
+  width: 14px;
+  height: 14px;
+  color: var(--ocean-teal);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hourly-forecast {
+    padding: 20px;
+  }
+  
+  .hourly-card {
+    min-width: 100px;
+    padding: 15px 10px;
+  }
+  
+  .hour-icon {
+    font-size: 1.5rem;
+  }
+  
+  .hour-temp {
+    font-size: 1rem;
+  }
+  
+  .hour-detail {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.2rem;
+  }
+  
+  .hourly-card {
+    min-width: 90px;
+    padding: 12px 8px;
+  }
+}
